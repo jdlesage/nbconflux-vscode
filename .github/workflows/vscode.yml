@@ -17,5 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 8.x
-    - run: npm install
-    - run: npm test
+    - name: npm install
+        run: npm ci
+        env:
+          CI: "true"
+    - name: npm test
+        run: npm run test:unit
+        env:
+          CI: "true"

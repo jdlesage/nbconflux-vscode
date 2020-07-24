@@ -17,7 +17,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 8.x
-    - name: Run tests
-      run: |
-        npm install
-        npm run test
+    - run: npm install
+    - run: npm test
